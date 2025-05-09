@@ -1,0 +1,16 @@
+so this file contains the email button which is currently inside the helloApplication.java i am putting that button's code here becuase for obvious reasons it will not be on the main page of the website 
+
+If you want this to open from helloApplication, just add a button like:
+
+java
+Copy
+Edit
+Button emailBtn = new Button("Email");
+emailBtn.setOnAction(e -> {
+    EmailPage emailPage = new EmailPage();
+    try {
+        emailPage.start((Stage) ((Node) e.getSource()).getScene().getWindow());
+    } catch (Exception ex) {
+        ex.printStackTrace();
+    }
+});
